@@ -1,0 +1,34 @@
+.container {
+    display: block;
+    background-image: url("../../../public/images/background01.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    padding: 2%;
+}
+
+.title {
+    margin: 2vh;
+    font-family: 'Jalnan';
+    text-align: center;
+}
+
+.text {
+    font-family: 'GmarketSansMedium';
+    margin: 2vh 15%;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("../../../public//fonts/GmarketSansMedium.otf") format('opentype');
+}
