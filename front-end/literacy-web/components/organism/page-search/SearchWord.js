@@ -11,6 +11,7 @@ export default function SearchWord() {
     const [account, setAccount] = useState("");
     const [istrue, setistrue] = useState(0);
 
+    // fetch기능 완성후 사용할 것
     const { isLoading, error, data } = useQuery(['Morp', account], () =>
         postMorp(account),
         {
