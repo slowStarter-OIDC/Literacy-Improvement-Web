@@ -1,0 +1,20 @@
+.box {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 90px 80px / 80px 50px;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    /* margin-bottom: 5px; */
+    font-size: 16px;
+    color: #ececfd;
+    font-size: bold;
+    background-color: #31313C;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 8vh;
+    box-shadow: rgba(43, 49, 41, 0.363) 0px 8px 12px 0px;
+    /* max-width: 230px;
+    width: 100%; */
+}

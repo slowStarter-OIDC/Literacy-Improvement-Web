@@ -1,0 +1,33 @@
+.box {
+    position: relative;
+    margin: 5px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 1px 4px 4px 0 rgb(117 121 125 / 6%), 0 1px 3px 0 rgb(113 117 121 / 20%);
+}
+
+.box:hover {
+    background-color: rgba(250, 181, 96, 0.87);
+}
+
+.word {
+    font-family: 'GmarketSansMedium';
+    display: inline-block;
+}
+
+.type {
+    display: inline-block;
+    font-size: 0.8em;
+    margin-left: 3px;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("../../../public//fonts/GmarketSansMedium.otf") format('opentype');
+}

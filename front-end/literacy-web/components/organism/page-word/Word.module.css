@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.582);
+}
+
+
+/* .container::after {
+    content: "";
+    background-image: url("../../../public/images/library5.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 80%;
+    z-index: -1;
+} */
+
+.main_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-top: 4vh;
+    margin-left: 42%;
+    margin-bottom: 2vh;
+    width: 100%;
+    font-family: 'Jalnan';
+    font-size: 30px;
+    color: rgba(4, 105, 63, 0.863);
+}
+
+.item_cover {
+    list-style: none;
+    max-width: 60%;
+    border-radius: 10px;
+    /* 너비 | 스타일 | 색 */
+    border: 10px solid rgba(170, 227, 170, 0.374);
+    margin-bottom: 3%;
+}

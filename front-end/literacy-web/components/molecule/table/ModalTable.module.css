@@ -1,0 +1,24 @@
+.widthleft {
+    width: 25%;
+    position: relative;
+}
+
+.widthright {
+    /* width: 85%; */
+    width: 500px;
+    position: relative;
+}
+
+.center {
+    position: relative;
+    top: 250px;
+    left: 180px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.test2 {
+    display: block;
+}

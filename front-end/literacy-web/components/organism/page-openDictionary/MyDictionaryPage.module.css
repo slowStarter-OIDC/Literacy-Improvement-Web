@@ -1,0 +1,113 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.705);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../../public/images/library2.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 80%;
+    z-index: -1;
+}
+
+.title {
+    font-family: 'Jalnan';
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.button_mydictionary {
+    position: relative;
+    display: flex;
+    font-weight: 600;
+    font-size: 1.6vh;
+    width: 17vh;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
+    background-color: fdf5e2;
+    border-radius: 5px;
+    margin: 6px 6px 12px 6px;
+    transition: all 0.3s ease;
+}
+
+.button_mydictionary:hover {
+    background-color: rgb(165, 226, 255);
+    transition: all 0.3s ease;
+}
+
+.dictionary_list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: beige;
+    cursor: pointer;
+    width: 30vh;
+    height: 10vh;
+    margin: 3vh;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 1px 4px 4px 0 rgb(117 121 125 / 6%), 0 1px 3px 0 rgb(113 117 121 / 20%);
+}
+
+.item:hover {
+    background-color: rgb(165, 226, 255);
+    transition: all 0.3s ease;
+}
+
+.button_delete {
+    top: -20px;
+    right: -123px;
+    background-color: rgb(255, 168, 168);
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 1em;
+}
+
+.button_delete:hover {
+    background-color: rgb(243, 12, 12);
+    transition: all 0.3s ease;
+}
+
+.dict_title {
+    position: relative;
+    top: -10px;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("../../../public//fonts/GmarketSansMedium.otf") format('opentype');
+}
