@@ -1,0 +1,13 @@
+.containner {
+    width: 65vh;
+    height: 46.9vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.width {
+    width: 21vh;
+    height: 5vh;
+}

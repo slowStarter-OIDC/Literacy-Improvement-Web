@@ -9,21 +9,23 @@ import com.kotudyprj.dto.UserRankingDto;
 
 @Mapper
 public interface IUserRankingDao {
-   
-   // user_ranking ?…Œ?´ë¸”ì— ?‚¬?š©??˜ ? •ë³? ?ƒ?„±user_ranking ?…Œ?´ë¸”ì— ?‚¬?š©??˜ ? •ë³? ?ƒ?„±
-   public void createRankingInfo(Object userId, Object nickName, Object image);
-   
-   // user_ranking ?…Œ?´ë¸? PRIMARY_KEY ì¤‘ë³µ ?™•?¸
-   public String checkRankingUserId(Object userId);
-   
-   // user_ranking ?…Œ?´ë¸? ? •ë³? ?™•?¸
-   public int selectQuizRanking(@Param("_userId") String userId);
-   
-   // user_ranking ?…Œ?´ë¸? ? •ë³? ë³?ê²?
-   public void getQuizResult(@Param("_userId") String userId, @Param("_point") int point);
-   
-   // user_ranking 10ê°? ë½‘ì•„?˜¤ê¸?
-   public List<Object> userRankingPoint();
-    public List<UserRankingDto> userRankingUserId();
-    public List<Object> userRankingImage();
+
+	// user_ranking Å×ÀÌºí¿¡ »ç¿ëÀÚÀÇ Á¤º¸ »ı¼º
+	public void createRankingInfo(Object userId, Object nickName, Object image);
+
+	// user_ranking Å×ÀÌºí PRIMARY_KEY Áßº¹ È®ÀÎ
+	public String checkRankingUserId(Object userId);
+
+	// user_ranking Å×ÀÌºí Á¤º¸ È®ÀÎ
+	public int selectQuizRanking(@Param("_userId") String userId);
+
+	// user_ranking Å×ÀÌºí Á¤º¸ º¯°æ
+	public void getQuizResult(@Param("_userId") String userId, @Param("_point") int point);
+
+	// user_ranking 10°³ »Ì¾Æ¿À±â
+	public List<Object> userRankingPoint();
+
+	public List<UserRankingDto> userRankingUserId();
+
+	public List<Object> userRankingImage();
 }

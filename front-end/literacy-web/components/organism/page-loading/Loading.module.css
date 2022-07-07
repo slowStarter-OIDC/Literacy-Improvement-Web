@@ -1,0 +1,83 @@
+/* -----------------------------------------
+  =Default css to make the demo more pretty
+-------------------------------------------- */
+
+.container {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    padding: 15px;
+    overflow: hidden;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-family: 'Jalnan';
+    font-size: 1.5em;
+    color: rgb(77, 77, 77);
+}
+
+.load_wrapp {
+    padding: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.line {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #3fb35c;
+}
+
+.ring_1 {
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    border: 6px dashed #4bdb76;
+    border-radius: 100%;
+}
+
+
+/* =Animate the stuff
+------------------------ */
+
+.load_4 .ring_1 {
+    animation: loadingD 1.5s 0.3s cubic-bezier(0.17, 0.37, 0.43, 0.67) infinite;
+}
+
+.load_5 .ball_holder {
+    animation: loadingE 1.3s linear infinite;
+}
+
+@keyframes loadingD {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loadingE {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}

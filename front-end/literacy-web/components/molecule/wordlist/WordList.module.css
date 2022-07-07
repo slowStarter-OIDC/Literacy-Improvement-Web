@@ -1,0 +1,61 @@
+.card_container {
+    font-family: 'GmarketSansMedium';
+    display: flex;
+    flex-direction: row;
+    /* background-color: #d9f8e3b4; */
+    align-items: center;
+    justify-content: space-between;
+    margin: 13px 10px;
+    height: auto;
+    border: 10px;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.title_cover {
+    margin-top: 5px;
+}
+
+.title {
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.test {
+    margin-left: 1vh;
+    display: inline-block;
+}
+
+.mean_cover {
+    font-family: 'GmarketSansLight';
+    height: auto;
+    margin: 8px 8px;
+    font-weight: 100;
+}
+
+.button_cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("../../../public//fonts/GmarketSansMedium.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'GmarketSansLight';
+    src: url("../../../public//fonts/GmarketSansLight.otf") format('opentype');
+}

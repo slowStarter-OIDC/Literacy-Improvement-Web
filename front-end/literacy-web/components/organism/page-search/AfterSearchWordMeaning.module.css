@@ -1,0 +1,13 @@
+.container {
+    padding-bottom: 2vh;
+}
+
+.sentences {
+    display: inline-block;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.default {
+    cursor: default;
+}

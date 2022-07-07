@@ -1,0 +1,100 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 5vh;
+}
+
+.container_summary {}
+
+.content {
+    position: relative;
+    top: 4vh;
+    font-family: 'GmarketSansMedium';
+    font-size: 1.2em;
+    background-color: rgb(223, 250, 217);
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 1px 4px 4px 0 rgb(117 121 125 / 6%), 0 1px 3px 0 rgb(113 117 121 / 20%);
+}
+
+.slide {
+    top: 2vh;
+    margin-top: 2vh;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    /* background-color: var(--card-bg-color); */
+}
+
+.slide.active {
+    display: flex;
+    height: 46vh;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    transform: scale(0.9);
+}
+
+.btn_prevnext {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.span {
+    flex: auto;
+}
+
+.submit_button {
+    flex: auto;
+}
+
+.text {
+    font-family: 'Jalnan';
+    flex: auto;
+    margin: 15px;
+}
+
+.end_quiz_container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding-top: 20px;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 40px;
+    margin: 1vh;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    background-color: beige;
+    font-weight: 600;
+}

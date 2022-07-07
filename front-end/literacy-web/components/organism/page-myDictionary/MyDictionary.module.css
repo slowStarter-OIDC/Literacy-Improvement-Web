@@ -1,0 +1,71 @@
+.container {
+    background-color: #ced1faa1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.container::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../../public/images/library1.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 80%;
+    z-index: -1;
+}
+
+.title {
+    padding: 30px;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Jalnan';
+    font-size: 30px;
+}
+
+.flip {
+    width: 200px;
+    height: 250px;
+    perspective: 1100px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: .4s;
+    transform-style: preserve-3d;
+    font-family: Pretendard;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front {
+    background: red;
+}
+
+.back {
+    background: royalblue;
+    transform: rotateY(180deg);
+}
+
+.flip:hover .card {
+    transform: rotateY(180deg);
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}

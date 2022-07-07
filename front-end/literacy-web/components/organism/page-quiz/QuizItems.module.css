@@ -1,0 +1,39 @@
+.container {
+    background-color: #aed6c18a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-image: linear-gradient(to right bottom, #ffffff, #fcfafe, #fbf4fb, #fceef5, #fee8ee, #ffe7e7, #ffe6df, #ffe7d7, #f6eed5, #e9f5db, #dafbe9, #d1fffc); */
+    z-index: 0;
+}
+
+.container::after {
+    position: absolute;
+    content: "";
+    background-image: url("../../../public/images/kid4.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 70%;
+    z-index: -1;
+}
+
+.title {
+    font-family: 'Jalnan';
+    width: 100%;
+    height: 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 3vh 20%;
+}
+
+@font-face {
+    font-family: 'Jalnan';
+    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url("../../../public//fonts/GmarketSansMedium.otf") format('opentype');
+}

@@ -1,0 +1,93 @@
+.toggle_button {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    border: 1px solid #ccc;
+    background: #eee;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /* margin-bottom: 5px; */
+}
+
+#toggle_button,
+#toggle_contents {
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+#toggle_button:checked+#toggle_contents {
+    width: 346px;
+    height: auto;
+    cursor: pointer;
+    /* position: relative; */
+    border: 1px solid #ccc;
+    border-top: 0;
+    padding: 10px;
+    overflow-y: scroll;
+    position: absolute;
+    max-height: 150px;
+    border-radius: 4px;
+    background-color: #31313C;
+    box-shadow: rgb(0 0 0 / 30%) 0px 8px 12px 0px;
+    color: #ececfd;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.close_button {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 1;
+    background: #555;
+    color: #fff;
+}
+
+.selection {
+    margin-bottom: 10px;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 4px;
+    height: 25%;
+}
+
+.input {
+    width: 60%;
+    height: 3vh;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.add_button {
+    background: inherit;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    overflow: visible;
+    cursor: pointer;
+    margin: 5px;
+    border: 0;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: block;
+    font-size: 1.4em;
+    background: #ccc;
+}
+
+.add_button:hover {
+    background-color: rgb(199, 253, 255);
+}

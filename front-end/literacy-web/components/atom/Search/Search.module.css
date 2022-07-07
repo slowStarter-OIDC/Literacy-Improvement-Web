@@ -1,0 +1,21 @@
+.container {
+    margin: 5px;
+    display: flex;
+    width: 500px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #0053B5;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.input {
+    border-color: transparent;
+    /* Take available width */
+    font-size: medium;
+    width: 460px;
+    border: none;
+    outline: none;
+    height: 3.5vh;
+}

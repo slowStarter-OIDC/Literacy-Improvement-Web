@@ -1,0 +1,15 @@
+.container {
+    background-color: #FEE500;
+}
+
+.text {
+    color: #191919;
+}
+
+.button {
+    background-image: url("../../../public/kakao_login_button/kakao_login_medium_narrow.png");
+    width: 180px;
+    height: 45px;
+    border: none;
+    border-radius: 12px;
+}

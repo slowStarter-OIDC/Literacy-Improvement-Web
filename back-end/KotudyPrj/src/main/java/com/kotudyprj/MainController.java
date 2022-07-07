@@ -20,15 +20,28 @@ import org.springframework.web.bind.annotation.RestController;
 import com.kotudyprj.dao.IKakaoDao;
 import com.kotudyprj.dao.IUserRankingDao;
 import com.kotudyprj.dto.KakaoDto;
+import com.kotudyprj.dto.VocabularyNoteDto;
+import com.kotudyprj.dto.WordItemDto;
+import com.kotudyprj.dto.WordsDto;
+import com.kotudyprj.service.DailyWordService;
 import com.kotudyprj.service.KakaoAPI;
+import com.kotudyprj.service.SearchWordService;
+import com.kotudyprj.service.VocabularyService;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class MainController {
+// Service
+	@Autowired
+	DailyWordService dailyWordService;
 
-	// Service
+	@Autowired
+	SearchWordService searchWordService;
 
-	// DAO
+	@Autowired
+	VocabularyService vocabularyService;
+
+// DAO
 	@Autowired
 	IKakaoDao iKakaoDao;
 
@@ -65,7 +78,7 @@ public class MainController {
 			// if (iUserRankingDao.checkRankingUserId(kakaoDto.getUserId()) == null) {
 			iUserRankingDao.createRankingInfo(kakaoDto.getUserId(), kakaoDto.getNickName(), kakaoDto.getImage());
 			// }
-			System.out.println(kakaoDto.getUserId() + " =========�븘�씠�뵒");
+			System.out.println(kakaoDto.getUserId() + " ========= �� �� ��");
 			List check = iKakaoDao.loginDao(kakaoDto.getUserId());
 			loginId = req.getSession();
 			loginId.setAttribute("userId", kakaoDto.getUserId());
@@ -80,6 +93,54 @@ public class MainController {
 
 		loginId.removeAttribute("userId");
 		return "index";
+	}
+
+	@GetMapping("/dailyWords")
+	public List<WordsDto> dailyWords(WordsDto wordsDto) {
+		List<WordsDto> list = new ArrayList<>();
+		list = dailyWordService.dailyWords(wordsDto);
+		return list;
+
+	}
+
+	// 문장 검색
+	@PostMapping("/searchWord")
+	public List<String> paraphraseCheck2(@RequestBody Map<String, String> body) {
+		List<String> list = new ArrayList<>();
+		list = searchWordService.paraphraseCheck(body);
+		return list;
+	}
+
+	// 한국어 기초사전 API호출
+	@GetMapping("/oneWord")
+	public List<WordItemDto> oneWord(@RequestParam String q) {
+
+		List<WordItemDto> list = new ArrayList<>();
+		list = searchWordService.oneWord(q);
+		return list;
+	}
+
+	// 나만의 단어장 불러오기
+	@GetMapping("/myPage")
+	public List<VocabularyNoteDto> myPage() {
+		List<VocabularyNoteDto> list = new ArrayList<>();
+		list = vocabularyService.myPage(loginId);
+
+		return list;
+	}
+
+	// 단어장에 추가
+	@GetMapping("/addToNote")
+	public void addToNote(@RequestParam String q, @RequestParam String p) {
+		vocabularyService.addToNote(loginId, q, p);
+	}
+
+	// 단어장에서 단어 삭제
+	@GetMapping("/deleteFromNote")
+	public List<VocabularyNoteDto> deleteFromNote(@RequestParam String word) {
+		List<VocabularyNoteDto> list = new ArrayList<>();
+		list = vocabularyService.deleteFromNote(loginId, word);
+		return list;
 	}
 
 }

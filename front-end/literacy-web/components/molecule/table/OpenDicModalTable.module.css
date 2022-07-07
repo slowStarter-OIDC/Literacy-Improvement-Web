@@ -1,0 +1,39 @@
+.containner {
+    width: 65vh;
+    height: 46.9vh;
+    overflow-y: scroll;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.table {
+    /* overflow-y: scroll;
+    align-items: center;
+    justify-content: center; */
+    margin: auto;
+}
+
+.width {
+    width: 21vh;
+    margin: 2vh 2px;
+}
+
+.arrow_box {
+    display: none;
+    position: absolute;
+    width: 100px;
+    padding: 7px;
+    left: 70%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+}
+
+.width:hover~.arrow_box {
+    display: block;
+}
