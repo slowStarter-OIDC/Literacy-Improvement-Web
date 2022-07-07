@@ -41,6 +41,8 @@ public class MainController {
 	@Autowired
 	VocabularyService vocabularyService;
 
+	@Autowired
+	   OpenWordService openWordService;
 // DAO
 	@Autowired
 	IKakaoDao iKakaoDao;
@@ -62,7 +64,7 @@ public class MainController {
 	@GetMapping("/kakaoAuth")
 	public Object kakaoLogin(@RequestParam String code, HttpServletRequest req, KakaoDto kakaoDto) {
 
-		// 클라이언트의 이메일이 존재할 때 세션에 해당 이메일과 토큰 등록
+		// �겢�씪�씠�뼵�듃�쓽 �씠硫붿씪�씠 議댁옱�븷 �븣 �꽭�뀡�뿉 �빐�떦 �씠硫붿씪怨� �넗�겙 �벑濡�
 		HttpSession session = req.getSession(true);
 		String access_Token = kakaoAPI.getAccessToken(code);
 		HashMap<String, Object> userInfo = kakaoAPI.getUserInfo(access_Token);
@@ -78,7 +80,7 @@ public class MainController {
 			// if (iUserRankingDao.checkRankingUserId(kakaoDto.getUserId()) == null) {
 			iUserRankingDao.createRankingInfo(kakaoDto.getUserId(), kakaoDto.getNickName(), kakaoDto.getImage());
 			// }
-			System.out.println(kakaoDto.getUserId() + " ========= �� �� ��");
+			System.out.println(kakaoDto.getUserId() + " ========= 占쏙옙 占쏙옙 占쏙옙");
 			List check = iKakaoDao.loginDao(kakaoDto.getUserId());
 			loginId = req.getSession();
 			loginId.setAttribute("userId", kakaoDto.getUserId());
@@ -103,7 +105,7 @@ public class MainController {
 
 	}
 
-	// 문장 검색
+	// 臾몄옣 寃��깋
 	@PostMapping("/searchWord")
 	public List<String> paraphraseCheck2(@RequestBody Map<String, String> body) {
 		List<String> list = new ArrayList<>();
@@ -111,7 +113,7 @@ public class MainController {
 		return list;
 	}
 
-	// 한국어 기초사전 API호출
+	// �븳援��뼱 湲곗큹�궗�쟾 API�샇異�
 	@GetMapping("/oneWord")
 	public List<WordItemDto> oneWord(@RequestParam String q) {
 
@@ -120,7 +122,7 @@ public class MainController {
 		return list;
 	}
 
-	// 나만의 단어장 불러오기
+	// �굹留뚯쓽 �떒�뼱�옣 遺덈윭�삤湲�
 	@GetMapping("/myPage")
 	public List<VocabularyNoteDto> myPage() {
 		List<VocabularyNoteDto> list = new ArrayList<>();
@@ -129,13 +131,13 @@ public class MainController {
 		return list;
 	}
 
-	// 단어장에 추가
+	// �떒�뼱�옣�뿉 異붽�
 	@GetMapping("/addToNote")
 	public void addToNote(@RequestParam String q, @RequestParam String p) {
 		vocabularyService.addToNote(loginId, q, p);
 	}
 
-	// 단어장에서 단어 삭제
+	// �떒�뼱�옣�뿉�꽌 �떒�뼱 �궘�젣
 	@GetMapping("/deleteFromNote")
 	public List<VocabularyNoteDto> deleteFromNote(@RequestParam String word) {
 		List<VocabularyNoteDto> list = new ArrayList<>();
@@ -143,4 +145,30 @@ public class MainController {
 		return list;
 	}
 
+	// �삤�뵂�궗�쟾�뿉�꽌 �궘�젣
+		@PostMapping("/deleteFromOpen")
+		public void deletetoOpen(@RequestBody Map<String, Integer> body) {
+			System.out.println(body.get("id")); // �솗�씤�슜
+			openWordService.deleteFromOpen(body);
+		}
+
+		// �삤�뵂�궗�쟾�뿉�꽌 遺덈윭�삤湲�
+		@GetMapping("/loadFromOpen")
+		public List<OpenWordDto> loadtoOpen() {
+			List<OpenWordDto> list = new ArrayList<>();
+			list = openWordService.loadtoOpen(loginId);
+			return list;
+		}
+
+		// 紐⑤뱺 �삤�뵂�궗�쟾 遺덈윭�삤湲�
+		@GetMapping("/loadAllOpen")
+		public List<OpenWordDto> loadAllOpen() {
+			return openWordService.loadAllOpen();
+		}
+
+		// �삤�뵂�궗�쟾�뿉�꽌 移댄뀒怨좊━濡� �궘�젣
+		@GetMapping("/deleteOpenCategory")
+		public void deletetoOpen(@RequestParam String category) {
+			openWordService.deletetoOpen(loginId, category);
+		}	
 }
