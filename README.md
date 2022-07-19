@@ -14,8 +14,9 @@
 
 Build and Monitoring on
 <a href="https://accordions.co.kr/">
-<img src="https://accordions.co.kr/wp-content/uploads/2019/12/logo.png">
-  </a>
+<img src="https://user-images.githubusercontent.com/28720642/179758210-c724957e-c2a9-4c14-93da-973cb66bc774.png">
+</a>
+  
 # 
 ### 안녕하세요. 문해력 향상을 위한 Kotudy 애플리케이션을 개발하는 팀 SlowStarter 입니다.
 ## ![image](https://user-images.githubusercontent.com/28853329/179004765-6ae17bcc-0a17-4bbd-a41a-0cd60d7b24b7.png)
