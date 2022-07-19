@@ -1,6 +1,6 @@
 package com.kotudyprj.dto;
 
-// í€´ì¦ˆ ìƒì„±ì„ ìœ„í•œ ê²°ê³¼ê°’ ê°€ì ¸ì˜¤ê¸°
+// ÄûÁî °ª ¸®ÅÏ
 public class QuizReturnDto {
 	private String word;
 	private String mean;

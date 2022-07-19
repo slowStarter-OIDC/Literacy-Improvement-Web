@@ -64,8 +64,8 @@ public class SearchWordServiceImpl implements SearchWordService {
 		}
 	}
 
-	// 한국어 기초사전 API호출을 위해서
-	// 인증서 SSL 회피 주의
+	// �븳援��뼱 湲곗큹�궗�쟾 API�샇異쒖쓣 �쐞�빐�꽌
+	// �씤利앹꽌 SSL �쉶�뵾 二쇱쓽
 	public void sslTrustAllCerts() {
 		TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
 			public X509Certificate[] getAcceptedIssuers() {
@@ -93,9 +93,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 		List<String> finalDtoList = new ArrayList<>();
 		// FinalDto finalDto = null;
 		String openApiURL = "http://aiopen.etri.re.kr:8000/WiseNLU";
-		String accessKey = "2c349c2b-b687-40ae-bf44-6683c48031f4"; // 발급받은 API Key
-		String analysisCode = "ner"; // 언어 분석 코드
-		String text = ""; // 분석할 텍스트 데이터
+		String accessKey = "2c349c2b-b687-40ae-bf44-6683c48031f4"; // 문장분석 API Key
+		String analysisCode = "ner"; // 언어코드
+		String text = ""; // 분석할 문장
 		Gson gson = new Gson();
 
 		Map<String, Object> request = new HashMap<>();
@@ -213,9 +213,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 				return morpheme.type.equals("NNG") || morpheme.type.equals("NNB");
 			}).limit(5).forEach(morpheme -> {
 
-				System.out.println("[紐낆궗] " + morpheme.text + " (" + morpheme.count + ")");
+				System.out.println("[명사] " + morpheme.text + " (" + morpheme.count + ")");
 
-				finalDtoList.add("紐낆궗");
+				finalDtoList.add("명사");
 				finalDtoList.add(morpheme.text);
 
 				return;
@@ -224,9 +224,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 				return morpheme.type.equals("NNP");
 			}).limit(5).forEach(morpheme -> {
 
-				System.out.println("[怨좎쑀紐낆궗] " + morpheme.text + " (" + morpheme.count + ")");
+				System.out.println("[고유명사] " + morpheme.text + " (" + morpheme.count + ")");
 
-				finalDtoList.add("怨좎쑀紐낆궗");
+				finalDtoList.add("고유명사");
 				finalDtoList.add(morpheme.text);
 
 				return;
@@ -236,9 +236,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 				return morpheme.type.equals("NP");
 			}).limit(5).forEach(morpheme -> {
 
-				System.out.println("[��紐낆궗] " + morpheme.text + " (" + morpheme.count + ")");
+				System.out.println("[대명사] " + morpheme.text + " (" + morpheme.count + ")");
 
-				finalDtoList.add("��紐낆궗");
+				finalDtoList.add("대명사");
 				finalDtoList.add(morpheme.text);
 
 				return;
@@ -249,9 +249,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 			morphemes.stream().filter(morpheme -> {
 				return morpheme.type.equals("VV");
 			}).limit(5).forEach(morpheme -> {
-				System.out.println("[�룞�궗] " + morpheme.text + " (" + morpheme.count + ")");
+				System.out.println("[동사] " + morpheme.text + " (" + morpheme.count + ")");
 
-				finalDtoList.add("�룞�궗");
+				finalDtoList.add("동사");
 				finalDtoList.add(morpheme.text);
 				return;
 			});
@@ -259,9 +259,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 			morphemes.stream().filter(morpheme -> {
 				return morpheme.type.equals("MM") || morpheme.type.equals("MAG") || morpheme.type.equals("MAJ");
 			}).limit(5).forEach(morpheme -> {
-				System.out.println("[�닔�떇�뼵] " + morpheme.text + " (" + morpheme.count + ")");
+				System.out.println("[수식언] " + morpheme.text + " (" + morpheme.count + ")");
 
-				finalDtoList.add("愿��삎�궗");
+				finalDtoList.add("관형사");
 				finalDtoList.add(morpheme.text);
 				return;
 			});
@@ -271,9 +271,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 						|| morpheme.type.equals("JKO") || morpheme.type.equals("JKB") || morpheme.type.equals("JKV")
 						|| morpheme.type.equals("JKQ") || morpheme.type.equals("JX") || morpheme.type.equals("JC");
 			}).limit(5).forEach(morpheme -> {
-				System.out.println("[議곗궗] " + morpheme.text + " (" + morpheme.count + ")");
+				System.out.println("[조사] " + morpheme.text + " (" + morpheme.count + ")");
 
-				finalDtoList.add("議곗궗");
+				finalDtoList.add("조사");
 				finalDtoList.add(morpheme.text);
 				return;
 			});
@@ -284,7 +284,7 @@ public class SearchWordServiceImpl implements SearchWordService {
 			e.printStackTrace();
 		}
 		System.out.println(finalDtoList);
-		System.out.println("SearchWords Service�떒 �떎�뻾");
+		System.out.println("SearchWords Service단 실행");
 		return finalDtoList;
 	}
 
@@ -303,9 +303,9 @@ public class SearchWordServiceImpl implements SearchWordService {
 		try {
 			// OpenApi호출
 
-			System.out.println("======== �븳援��뼱 湲곗큹�궗�쟾 API �샇異� ========");
+			System.out.println("========한국어 기초사전 API 호출 ========");
 			String word = null; // example 검색을 위한 word
-			String urlStrWord = "https://krdict.korean.go.kr/api/search?" + "key=FAFF5405FEE6910E824515B8B9A2BA08" // �씤利앺궎
+			String urlStrWord = "https://krdict.korean.go.kr/api/search?" + "key=FAFF5405FEE6910E824515B8B9A2BA08" // 占쎌뵥筌앹빜沅�
 					+ "&q=" + q; // 검색 키워드
 			URL urlWord = new URL(urlStrWord);
 			HttpURLConnection urlconnectionWord = (HttpURLConnection) urlWord.openConnection();
@@ -324,7 +324,7 @@ public class SearchWordServiceImpl implements SearchWordService {
 			docWord = builderWord.parse(isWord);
 			XPathFactory xpathFactoryWord = XPathFactory.newInstance();
 			XPath xpathWord = xpathFactoryWord.newXPath();
-			XPathExpression exprWord = xpathWord.compile("/channel/item"); // xpath의 문법대로 가져온다
+			XPathExpression exprWord = xpathWord.compile("/channel/item"); //  xpath의 문법대로 가져온다
 			NodeList nodeListWord = (NodeList) exprWord.evaluate(docWord, XPathConstants.NODESET);
 			for (int i = 0; i < nodeListWord.getLength(); i++) {
 				NodeList childWord = nodeListWord.item(i).getChildNodes();
@@ -360,12 +360,12 @@ public class SearchWordServiceImpl implements SearchWordService {
 				}
 				wordItemDtos.add(wordItemDto);
 			}
-			System.out.println("OneWord Service�떒 �떎�뻾");
+			System.out.println("OneWord Service단 실행");
 			return wordItemDtos;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		System.out.println("OneWord Service�떒 NULL 由ы꽩");
+		System.out.println("OneWord Service단 NULL 리턴");
 		return wordItemDtos;
 	}
 
