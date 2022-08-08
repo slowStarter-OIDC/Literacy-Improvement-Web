@@ -34,6 +34,9 @@ Build and Monitoring on
   <a>
 <img src="https://img.shields.io/badge/Eclipse-FFFA62?style=for-the-badge&logo=appveyor"/>
   </a>
+  <a>
+<img src="https://img.shields.io/badge/Kubernetes-F2F362?style=for-the-badge&logo=appveyor"/>
+  </a>
 </p>
   
 ## 프로젝트 소개
