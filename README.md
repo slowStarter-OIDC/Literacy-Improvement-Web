@@ -44,13 +44,13 @@ Build and Monitoring on
 
 ## 참조 Wiki
 #### [카카오 REST-API][카카오 로그인 서비스]
-https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api
+> https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api
 #### [AI-HUB API][ETRI 문장분석기]
-https://aiopen.etri.re.kr/service_api.php
+> https://aiopen.etri.re.kr/service_api.php
 #### [표준국어대사전API][단어 뜻]
-https://stdict.korean.go.kr/openapi/openApiInfo.do
+> https://stdict.korean.go.kr/openapi/openApiInfo.do
 #### [마더텅 초등국어 대사전][초등단어]
-https://www.toptutor.co.kr/main/index.jsp
+> https://www.toptutor.co.kr/main/index.jsp
 ## 접속 주소
 ####
 
