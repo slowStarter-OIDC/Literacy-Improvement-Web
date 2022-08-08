@@ -1,6 +1,6 @@
 <p align=center><img width="35%" src="https://user-images.githubusercontent.com/28853329/183432749-5acff973-a5be-4bf2-ac68-86d3ddd5b123.png"/><p/>
-
-<a href="https://www.npmjs.com/" align=center>
+<p align=center>
+<a href="https://www.npmjs.com/">
   <img src="https://img.shields.io/badge/build-pending-yellow?style=flat-square">
 </a>
 <a href="https://www.npmjs.com/">
@@ -12,7 +12,7 @@
 <a href="https://nodejs.org/">
 <img src="https://img.shields.io/badge/node.js-v16.13.2-blue?style=flat-square">
 </a>
-
+</p>
 Build and Monitoring on
 <p align=center>
 <a href="https://accordions.co.kr/">
