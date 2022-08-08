@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/28853329/183430567-410b5ac0-a4c5-46b5-965e-97a63d5b1f03.png)
+<img width="100%" src="https://user-images.githubusercontent.com/28853329/183430567-410b5ac0-a4c5-46b5-965e-97a63d5b1f03.png"/>
 <div align=center>
   
 <a href="https://www.npmjs.com/">
