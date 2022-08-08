@@ -1,4 +1,4 @@
-# Literacy-Improvement-Web
+![image](https://user-images.githubusercontent.com/28853329/183430001-39686076-dac8-42bb-9a0e-088b293fd22e.png)
 <a href="https://www.npmjs.com/">
   <img src="https://img.shields.io/badge/build-pending-yellow?style=flat-square">
 </a>
