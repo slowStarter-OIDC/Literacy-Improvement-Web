@@ -13,7 +13,7 @@
 <img src="https://img.shields.io/badge/node.js-v16.13.2-blue?style=flat-square">
 </a>
 </p>
-<p align=center style="font-size : 20px">
+<p align=center>
 Build and Monitoring on
 </p>
 <p align=center>
