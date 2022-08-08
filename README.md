@@ -26,7 +26,7 @@ Build and Monitoring on
 # 
 ###               👋 안녕하세요. 문해력 향상을 위한 Kotudy 애플리케이션을 개발하는 팀 SlowStarter 입니다.
 ## ![image](https://user-images.githubusercontent.com/28853329/179004765-6ae17bcc-0a17-4bbd-a41a-0cd60d7b24b7.png)
-## 개발툴
+## 🌱 개발툴
 <p>
 <a>
 <img src="https://img.shields.io/badge/VScode-FFCA28?style=for-the-badge&logo=appveyor"/>
@@ -51,7 +51,7 @@ Build and Monitoring on
 | 김시우 | 팀원 | Infra |
 | 황선형 | 팀원 | Back-End |
 
-## 참조 Wiki
+## 💬 참조 Wiki
 #### [카카오 REST-API][카카오 로그인 서비스]
 > https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api
 #### [AI-HUB API][ETRI 문장분석기]
@@ -60,7 +60,7 @@ Build and Monitoring on
 > https://stdict.korean.go.kr/openapi/openApiInfo.do
 #### [마더텅 초등국어 대사전][초등단어]
 > https://www.toptutor.co.kr/main/index.jsp
-## 접속 주소
+## 📫 접속 주소
 ####
 
 
