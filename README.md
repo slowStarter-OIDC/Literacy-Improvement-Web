@@ -1,4 +1,4 @@
-<img width="20%" src="https://user-images.githubusercontent.com/28853329/183432749-5acff973-a5be-4bf2-ac68-86d3ddd5b123.png"/>
+<img width="35%" src="https://user-images.githubusercontent.com/28853329/183432749-5acff973-a5be-4bf2-ac68-86d3ddd5b123.png"/>
 <div align=center>
 
 <a href="https://www.npmjs.com/">
