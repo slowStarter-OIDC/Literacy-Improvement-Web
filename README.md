@@ -1,6 +1,6 @@
-<img width="100%" src="https://user-images.githubusercontent.com/28853329/183430567-410b5ac0-a4c5-46b5-965e-97a63d5b1f03.png"/>
+<img width="100%" src="https://user-images.githubusercontent.com/28853329/183430945-7c02632e-4e07-464f-b2e4-d29a99b3d4c0.png"/>
 <div align=center>
-  
+
 <a href="https://www.npmjs.com/">
   <img src="https://img.shields.io/badge/build-pending-yellow?style=flat-square">
 </a>
