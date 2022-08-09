@@ -23,7 +23,7 @@ public class OpenWordServiceImpl implements OpenWordService{
 		Object sessionId = loginId.getAttribute("userId");
 		String userId = sessionId.toString();
 		iOpenWordDao.addtoOpendic(userId, word, mean, morpheme, category);
-		System.out.println("AddToOpen Serviceë‹¨ ì‹¤í–‰");
+		System.out.println("AddToOpen Service´Ü ½ÇÇà");
 	}
 
 	// ("deleteFromOpen")
@@ -31,7 +31,7 @@ public class OpenWordServiceImpl implements OpenWordService{
 	public void deleteFromOpen(Map<String, Integer> body) {
 		int id = body.get("id");
 		iOpenWordDao.deletetoOpendic(id);
-		System.out.println("DeleteFromOpen Serviceë‹¨ ì‹¤í–‰");
+		System.out.println("DeleteFromOpen Service´Ü ½ÇÇà");
 	}
 
 	// ("loadFromOpen")
@@ -41,7 +41,7 @@ public class OpenWordServiceImpl implements OpenWordService{
 		String userId = sessionId.toString();
 		List<OpenWordDto> openwordList = new ArrayList<>();
 		openwordList = iOpenWordDao.loadtoOpendic(userId);
-		System.out.println("LoadToOpen Serviceë‹¨ ì‹¤í–‰");
+		System.out.println("LoadToOpen Service´Ü ½ÇÇà");
 		return openwordList;
 	}
 
@@ -50,7 +50,7 @@ public class OpenWordServiceImpl implements OpenWordService{
 	public List<OpenWordDto> loadAllOpen() {
 		List<OpenWordDto> openwordList = new ArrayList<>();
 		openwordList = iOpenWordDao.loadAllOpendic();
-		System.out.println("LoadAllOpen Serviceë‹¨ ì‹¤í–‰");
+		System.out.println("LoadAllOpen Service´Ü ½ÇÇà");
 		return openwordList;
 	}
 
@@ -59,6 +59,6 @@ public class OpenWordServiceImpl implements OpenWordService{
 		Object sessionId = loginId.getAttribute("userId");
 		String userId = sessionId.toString();
 		iOpenWordDao.deletetoOpencategory(userId, category);
-		System.out.println("DeleteOpenCategory Serviceë‹¨ ì‹¤í–‰");
+		System.out.println("DeleteOpenCategory Service´Ü ½ÇÇà");
 	}
 }

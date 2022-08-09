@@ -20,7 +20,7 @@ public class DailyWordServiceImpl implements DailyWordService {
 	public List<WordsDto> dailyWords(WordsDto wordsDto) {
 		List<WordsDto> list = new ArrayList<>();
 		list = iWordsDao.selectWordsDao();
-		System.out.println("DailyWords Serviceë‹¨ ì‹¤í–‰");
+		System.out.println("DailyWords Service´Ü ½ÇÇà");
 		return list;
 	}
 

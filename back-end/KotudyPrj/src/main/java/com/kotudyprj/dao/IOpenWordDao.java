@@ -9,11 +9,11 @@ import com.kotudyprj.dto.OpenWordDto;
 
 @Mapper
 public interface IOpenWordDao {
-   // ì˜¤í”ˆì‚¬ì „ DB ì— ë‹¨ì–´ ì¶”ê°€
+   // ¿ÀÇÂ»çÀü¿¡ Ãß°¡
    public void addtoOpendic(@Param("_userId") String userId, @Param("_word") String word, @Param("_mean") String mean, @Param("_morpheme") String morpheme, @Param("_category") String category);
-   // ì˜¤í”ˆì‚¬ì „ DB ì— ë‹¨ì–´ ì‚­ì œ
+   // ¿ÀÇÂ»çÀü¿¡¼­ »èÁ¦
    public void deletetoOpendic(@Param("_id") int id);
-   // ì˜¤í”ˆì‚¬ì „ DB ë‹¨ì–´ ë¶ˆëŸ¬ì˜¤ê¸°
+   // ¿ÀÇÂ»çÀü ºÒ·¯¿À±â
    public List<OpenWordDto> loadtoOpendic(@Param("_userId") String userId);
    public List<OpenWordDto> loadAllOpendic();
    public void deletetoOpencategory(@Param("_userId") String userId,@Param("_category") String category);

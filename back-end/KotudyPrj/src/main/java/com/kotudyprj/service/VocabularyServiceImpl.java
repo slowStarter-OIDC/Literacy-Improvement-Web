@@ -39,12 +39,12 @@ public class VocabularyServiceImpl implements VocabularyService{
 		Object sessionId = loginId.getAttribute("userId");
 		String userId = sessionId.toString();
 
-		// ë‹¨ì–´ì¥ì— ë‹¨ì–´ê°€ ì´ë¯¸ ìˆëŠ”ì§€ í™•ì¸
+		// ´Ü¾îÀå¿¡ ´Ü¾î°¡ ÀÌ¹Ì ÀÖ´ÂÁö È®ÀÎ
 		if (iVocabularyNoteDao.checkWord(userId, q) == 0) {
 			iVocabularyNoteDao.addWord(userId, q, p);
-			/* ë‚˜ì¤‘ì— ë‹¨ì–´ì¥ì— ë“¤ì–´ê°”ëŠ”ì§€ ì•ˆë“¤ì–´ê°”ëŠ”ì§€ ì¤‘ë³µê°’ì„ í”„ë¡ íŠ¸ì— ì „ë‹¬í•˜ê¸° */
+			/* ³ªÁß¿¡ ´Ü¾îÀå¿¡ µé¾î°¬´ÂÁö ¾Èµé¾î°¬´ÂÁö Áßº¹°ªÀ» ÇÁ·ĞÆ®¿¡ Àü´ŞÇÏ±â */
 		} else {
-			/* ë‚˜ì¤‘ì— ë‹¨ì–´ì¥ì— ë“¤ì–´ê°”ëŠ”ì§€ ì•ˆë“¤ì–´ê°”ëŠ”ì§€ ì¤‘ë³µê°’ì„ í”„ë¡ íŠ¸ì— ì „ë‹¬í•˜ê¸° */
+			 /* ³ªÁß¿¡ ´Ü¾îÀå¿¡ µé¾î°¬´ÂÁö ¾Èµé¾î°¬´ÂÁö Áßº¹°ªÀ» ÇÁ·ĞÆ®¿¡ Àü´ŞÇÏ±â */
 		}
 
 		if (iWordRankingDao.wordRankingSelect(q) == 0) {
@@ -53,7 +53,7 @@ public class VocabularyServiceImpl implements VocabularyService{
 		} else {
 			iWordRankingDao.wordRankingUp(q);
 		}
-		System.out.println("AddToNote Serviceï¿½ë–’ ï¿½ë–ï¿½ë»¾");
+		System.out.println("AddToNote Service´Ü ½ÇÇà");
 	}
 	
 	//("/deleteFromNote")
@@ -72,7 +72,7 @@ public class VocabularyServiceImpl implements VocabularyService{
 		} else {
 			iWordRankingDao.wordRankingDown(word);
 		}
-		System.out.println("DeleteFromNote Serviceï¿½ë–’ ï¿½ë–ï¿½ë»¾");
+		System.out.println("DeleteFromNote Service´Ü ½ÇÇà");
 		return vocabularyList;
 	}
 	
