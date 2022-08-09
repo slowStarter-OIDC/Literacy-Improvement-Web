@@ -1,4 +1,4 @@
-import QuizItems from "../components/organism/page-quiz/quizItems";
+import QuizItems from "../components/organism/page-quiz/QuizItems";
 import Seo from "../components/seo/Seo";
 
 export default function Quiz() {

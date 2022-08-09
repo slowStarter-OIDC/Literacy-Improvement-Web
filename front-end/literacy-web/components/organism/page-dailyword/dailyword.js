@@ -1,5 +1,5 @@
 import { dehydrate, QueryClient, useQuery } from "react-query";
-import WordCarousel from "../carousel/wordCarousel";
+import WordCarousel from "../carousel/WordCarousel";
 import { fetchDailyword } from "../../../pages/api/fetchDailyword";
 import styles from "./Dailyword.module.css";
 import Loading from "../page-loading/Loading";

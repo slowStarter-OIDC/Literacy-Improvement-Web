@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import ReactDOM from 'react-dom'
-import KakaoLoginBtn from '../../atom/kakaoButton/kakaoLoginBtn';
+import KakaoLoginBtn from '../../atom/kakaoButton/KakaoLoginBtn';
 import styles from './LoginModal.module.css';
 
 const LoginModal = ({ show, maskClosable, onClose, }) => {

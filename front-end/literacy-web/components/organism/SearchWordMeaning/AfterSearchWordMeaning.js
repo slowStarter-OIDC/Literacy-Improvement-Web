@@ -2,6 +2,8 @@ import styles from './AfterSearchWordMeaning.module.css';
 import Meanbox from "../../molecule/meanbox/Meanbox";
 
 export default function AfterSearchWordMeaning({ sentences }) {
+
+
     return (
         <div className={styles.container} >
             {

@@ -1,10 +1,9 @@
-import MyDictionary from "../components/organism/page-myDictionary/myDictionary";
+import MyDictionary from "../components/organism/page-myDictionary/MyDictionary";
 import { dehydrate, QueryClient, useQuery } from "react-query";
 import { getMyDictionary } from "./api/getMyDictionary";
-import NoLogin from "../components/organism/noLogin/NoLogin";
 import Seo from "../components/seo/Seo";
 
-export default function myDictionary() {
+export default function Dictionary() {
 
   const { isLoading, isError, error, data } = useQuery('mydictionary', () =>
     getMyDictionary(),
@@ -21,8 +20,6 @@ export default function myDictionary() {
       <Seo title="Kotudy" subtitle="나만의 단어장"></Seo>
       {isLoading ? (
         <div>Loading...</div>
-      ) : isError ? (
-        <div><NoLogin></NoLogin></div>
       ) : (<div>
         <MyDictionary dictionary={data}></MyDictionary>
       </div>)}

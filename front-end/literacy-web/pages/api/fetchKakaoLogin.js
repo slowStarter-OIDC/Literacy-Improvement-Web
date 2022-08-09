@@ -4,7 +4,7 @@ import axios from "axios";
 export const fetchKakaoLogin = async (code) => {
 
   const { data } = await axios.get(
-    "http://61.255.221.125:9999/kakaoAuth/", {
+    "https://175.45.193.46:32188/kakaoAuth/", {
       params: {
         code: code
       }

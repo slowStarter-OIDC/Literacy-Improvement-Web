@@ -2,9 +2,10 @@
 import axios from "axios";
 
 export const fetchDailyword = async () => {
+  
 
   const { data } = await axios.get(
-    "http://61.255.221.125:9999/dailyWords"
+    "https://10.110.179.10:32188/dailyWords"
   ).then((response) => {
     return response
   })

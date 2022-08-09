@@ -1,13 +1,13 @@
 import WordList from "../../molecule/wordlist/WordList";
-import styles from "./Word.module.css";
+import styles from "./Wordlayout.module.css";
 import { addToDictionary } from "../../../lib/myDictionary";
 
 
-export default function Word({ word, words }) {
+export default function Wordlayout({ word, words }) {
 
     const addMyDictionary = (addWord, addMean) => {
         addToDictionary(addWord, addMean);
-        
+
         alert(`"` + addWord + `"가 추가되었습니다!`)
     }
 

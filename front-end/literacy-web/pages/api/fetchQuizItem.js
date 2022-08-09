@@ -12,5 +12,8 @@ export const fetchQuizItem = async () => {
       console.log(error)
     });
 
+  if (data === undefined)
+    return true;
+
   return data;
 }

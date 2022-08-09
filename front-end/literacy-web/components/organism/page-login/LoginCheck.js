@@ -14,15 +14,15 @@ export default function LoginCheck() {
       const token = getCookie('userID');
       dispatch(loginUser(token))
     }
-  }, [isLogin])
+  }, [dispatch])
 
 
   return (
     <div>
       <LoginModal
         onClose={() => setShowModal(true)}
-        show={!isLogin}
-        // show={false}
+        // show={!isLogin}
+        show={false}
         maskClosable={true}
       >
       </LoginModal>

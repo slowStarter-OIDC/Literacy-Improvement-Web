@@ -1,9 +1,7 @@
 import MiddleModalBox from '../../atom/ModalBox/MiddleModalBox';
 import styles from './OpenDicModalTable.module.css';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-import DeleteButton from '../../atom/Button/DeleteButton';
 import { deleteOpenWord } from '../../../lib/openDictionary';
 
 export default function OpenDicModalTable({ children, data, handleCloseClick, onClose }) {

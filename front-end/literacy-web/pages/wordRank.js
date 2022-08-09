@@ -1,10 +1,10 @@
 import { dehydrate, QueryClient, useQuery } from "react-query";
 import Loading from "../components/organism/page-loading/Loading";
-import WordRank from "../components/organism/page-rank/wordRank";
+import WordRanking from "../components/organism/page-rank/WordRanking";
 import Seo from "../components/seo/Seo";
 import { fetchWordRank } from "./api/fetchWordRank";
 
-export default function WordRanking() {
+export default function WordRank() {
 
   const { isLoading, isError, error, data } = useQuery('wordRank', () =>
     fetchWordRank(),
@@ -28,7 +28,7 @@ export default function WordRanking() {
         ) : isError ? (
           <div>Error: {error.message}</div>
         ) : (
-        <WordRank wordList={data}></WordRank>
+        <WordRanking wordList={data}></WordRanking>
         )
       }
     </div>

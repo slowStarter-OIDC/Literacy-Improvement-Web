@@ -23,8 +23,6 @@ export const fetchWords = async (txt) => {
             method: method,
         }
     }
-
-
     ).then((response) => {
         return response;
     }).catch((error) => console.log(error))

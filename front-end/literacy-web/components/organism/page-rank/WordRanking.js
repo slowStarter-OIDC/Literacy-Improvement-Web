@@ -1,8 +1,8 @@
 import Link from "next/link";
-import styles from "./WordRank.module.css";
+import styles from "./WordRanking.module.css";
+import Image from "next/image";
 
-
-export default function WordRank({wordList}) {
+export default function WordRanking({ wordList }) {
 
   let rank_base_url = "https://ssl.nexon.com/s2/game/maplestory/renewal/common/ranking_num0"
 
@@ -18,10 +18,10 @@ export default function WordRank({wordList}) {
       <table className={styles.table}>
         <caption className={styles.caption}>"단어" "순위"</caption>
         <colgroup>
-          <col width="200"/>
-          <col width="300"/>
-          <col width="400"/>
-          <col width="300"/>
+          <col width="200" />
+          <col width="300" />
+          <col width="400" />
+          <col width="300" />
         </colgroup>
         <thead className={styles.thead}>
           <tr>
@@ -32,18 +32,19 @@ export default function WordRank({wordList}) {
           </tr>
         </thead>
         <tbody>
-        {wordList.map((word, index) => {
+          {wordList.map((word, index) => {
             return (
-              <tr className={styles.tr}>
+              <tr className={styles.tr} key={index}>
                 <td>
-                  {index<=2
-                    ?<img src={rank_base_url+(index+1)+".png"}></img>
-                    :<span className={styles.rank_num}>{index+1}</span>
+                  {index <= 2
+                    ? <img src={rank_base_url + (index + 1) + ".png"}></img>
+                    : <span className={styles.rank_num}>{index + 1}</span>
                   }
                 </td>
                 <Link href={{
                   pathname: '/word',
-                  query: { word:word.word }}}>
+                  query: { word: word.word }
+                }} passHref>
                   <td className={styles.word}>{word.word}</td>
                 </Link>
                 <td className={styles.mean}>{word.mean}</td>

@@ -10,7 +10,7 @@
 .container::after {
     position: absolute;
     content: "";
-    background-image: url("../../../public/images/kid4.png");
+    background-image: url("/images/kid4.png");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -20,7 +20,7 @@
 }
 
 .title {
-    font-family: 'Jalnan';
+    font-family: "Jalnan";
     width: 100%;
     height: 20px;
     font-size: 1.4em;
@@ -29,11 +29,11 @@
 }
 
 @font-face {
-    font-family: 'Jalnan';
-    src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
+    font-family: "Jalnan";
+    src: url("/fonts/JalnanOTF.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url("../../../public//fonts/GmarketSansMedium.otf") format('opentype');
+    font-family: "GmarketSansMedium";
+    src: url("/fonts/GmarketSansMedium.otf") format("opentype");
 }

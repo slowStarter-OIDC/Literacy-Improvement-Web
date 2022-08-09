@@ -18,7 +18,7 @@
 }
 
 .question {
-    font-family: 'Jalnan';
+    /* font-family: 'Jalnan'; */
     margin-bottom: 2vh;
     text-align: center;
 }
@@ -45,7 +45,7 @@
     transition: all 0.3s ease;
 }
 
-@font-face {
+/* @font-face {
     font-family: 'Jalnan';
     src: url("../../../public//fonts/JalnanOTF.otf") format('opentype');
-}
+} */

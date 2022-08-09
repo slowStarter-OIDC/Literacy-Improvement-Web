@@ -5,7 +5,7 @@ export default function KakaoLoginBtn() {
 
   return (
     <div className='container'>
-      <Link href="/api/kakaoAuth">
+      <Link href="/api/kakaoAuth" passHref>
         <button className={styles.button}></button>
       </Link>
     </div>

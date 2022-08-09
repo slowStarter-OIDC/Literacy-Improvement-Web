@@ -1,7 +1,7 @@
-import styles from "./UserRank.module.css";
+import styles from "./UserRanking.module.css";
 
 
-export default function UserRank({userList, userInfo}) {
+export default function UserRanking({userList, userInfo}) {
 
   let rank_base_url = "https://ssl.nexon.com/s2/game/maplestory/renewal/common/ranking_num0"
 

@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "./QuizCarousel.module.css";
-import PrevNextButton from "../../molecule/buttons/prevnextButton";
-import PrevButton from "../../molecule/buttons/prevButton";
-import QuizItem from "../../molecule/quizItem/quizitem";
+import PrevNextButton from "../../molecule/buttons/PrevNextButton";
+import PrevButton from "../../molecule/buttons/PrevButton";
+import QuizItem from "../../molecule/quizItem/QuizItem";
 import Button from "../../atom/Button/Button";
-import { useSelector } from 'react-redux';
 import { useMutation } from "react-query";
 import { fetchQuizResult } from "../../../pages/api/fetchQuizResult";
 import { useRouter } from "next/router";
 
 
-export default function QuizCarousel({slideItems}) {
+export default function QuizCarousel({ slideItems }) {
 
-  const email = useSelector((state) => state.authSlice.email)
-  const [slideTotal, setSlideTotal] = useState(slideItems.length-1);
+  const [slideTotal, setSlideTotal] = useState(slideItems.length - 1);
   const [slideCurrent, setSlideCurrent] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [isSubmitAnswer, setIsSubmitAnswer] = useState(false);
@@ -21,13 +19,13 @@ export default function QuizCarousel({slideItems}) {
 
 
   const mutation = useMutation(score => {
-    let body = {score: score}
+    let body = { score: score }
 
     return fetchQuizResult(body)
   })
 
   let answerList = []
-  answerList.length = slideTotal+1
+  answerList.length = slideTotal + 1
 
   const slideLeft = () => {
     if (slideCurrent < 1) {
@@ -48,7 +46,7 @@ export default function QuizCarousel({slideItems}) {
   }
 
   const countAnswer = (isAnswer) => {
-    {isAnswer? setCorrectCount(correctCount + 1) : {}}
+    { isAnswer ? setCorrectCount(correctCount + 1) : {} }
     slideRight()
   }
 
@@ -63,10 +61,10 @@ export default function QuizCarousel({slideItems}) {
   }
 
   const quizSummary = (
-    <div className={styles.container_summary}>
+    <div>
       <div className={styles.summary}>
         <h2>{correctCount}점</h2>
-        <h2>{correctCount}/{slideTotal+1}</h2>
+        <h2>{correctCount}/{slideTotal + 1}</h2>
       </div>
       <ul>
         {slideItems.map((slide, index) => {
@@ -77,7 +75,7 @@ export default function QuizCarousel({slideItems}) {
       </ul>
     </div>
   )
-  
+
   const gotoHome = () => {
     router.push('/')
   }
@@ -86,36 +84,36 @@ export default function QuizCarousel({slideItems}) {
     <div className={`${styles.box} ${styles.container}`}>
       <div className={styles.content}>
         <div>
-          {(slideCurrent<=slideTotal)?
-          // 퀴즈가 진행중
+          {(slideCurrent <= slideTotal) ?
+            // 퀴즈가 진행중
             slideItems.map((slide, index) => {
               return (
-                <div key={slide.word+index} className={index === slideCurrent 
-                  ? `${styles.slide} ${styles.active}` 
+                <div key={slide.word + index} className={index === slideCurrent
+                  ? `${styles.slide} ${styles.active}`
                   : `${styles.slide}`}
                 >
                   <QuizItem
-                  content={slide} 
-                  setAnswerList={setAnswerList} 
-                  countAnswer={countAnswer}>
+                    content={slide}
+                    setAnswerList={setAnswerList}
+                    countAnswer={countAnswer}>
                   </QuizItem>
                 </div>
               )
-            }):
+            }) :
             // 퀴즈가 끝나면
             <div className={styles.end_quiz_container}>
               <h3 className={styles.text}>퀴즈가 종료되었습니다!</h3>
               {isSubmitAnswer
-              ?quizSummary
-              :<Button className={styles.submit_button} label="제출하기" onClick={() => submitAnswer()}></Button>
+                ? quizSummary
+                : <Button className={styles.submit_button} label="제출하기" onClick={() => submitAnswer()}></Button>
               }
             </div>
           }
         </div>
         <div className={styles.btn_prevnext}>
-          {slideCurrent>slideTotal
-          ?(isSubmitAnswer?<Button label="홈으로" onClick={() => gotoHome()}></Button>:<PrevButton prevEvent={() => slideLeft()}/>)
-          :<PrevNextButton prevEvent={() => slideLeft()} nextEvent={() => slideRight()}/>
+          {slideCurrent > slideTotal
+            ? (isSubmitAnswer ? <Button label="홈으로" onClick={() => gotoHome()}></Button> : <PrevButton prevEvent={() => slideLeft()} />)
+            : <PrevNextButton prevEvent={() => slideLeft()} nextEvent={() => slideRight()} />
           }
         </div>
       </div>

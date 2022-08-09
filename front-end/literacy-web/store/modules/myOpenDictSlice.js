@@ -17,7 +17,7 @@ const myOpenDictSlice = createSlice({
             state.category.push(action.payload)
         },
         setCategory: (state, action) => {
-            action.payload.map((item) => {state.category.push(item.category) })
+            action.payload.map((item) => { state.category.push(item.category) })
         }
     },
 });

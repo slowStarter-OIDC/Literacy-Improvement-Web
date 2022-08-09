@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function WordList({ word, content, addMyDictionary, index }) {
     const [showModal, setShowModal] = useState(false);
-    
+
     const AddkMyDictionary = () => {
         addMyDictionary(word, content.definition)
     };
@@ -16,7 +16,7 @@ export default function WordList({ word, content, addMyDictionary, index }) {
             <div className={styles.content}>
                 <div className={styles.title_cover}>
                     <h2 className={styles.title}>{index + 1}.{word}</h2>
-                    {content.pos?<h5 className={styles.test}> [{content.pos}]</h5>: <></>}
+                    {content.pos ? <h5 className={styles.test}> [{content.pos}]</h5> : <></>}
                     {content.type == "일반어" ? <></> : <h5 className={styles.test}>{content.type}</h5>}
                 </div>
                 <div className={styles.mean_cover}>

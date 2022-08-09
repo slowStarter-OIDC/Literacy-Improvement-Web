@@ -1,5 +1,5 @@
 import { dehydrate, QueryClient, useQuery } from "react-query";
-import UserRank from "../components/organism/page-rank/userRank";
+import UserRanking from "../components/organism/page-rank/UserRanking";
 import { fetchUserRank } from "./api/fetchUserRank";
 import { useSelector } from 'react-redux';
 import { useState } from "react";
@@ -8,7 +8,7 @@ import Loading from "../components/organism/page-loading/Loading";
 import Seo from "../components/seo/Seo";
 
 
-export default function UserRanking() {
+export default function UserRank() {
 
   const userName = useSelector((state) => state.authSlice.email)
   const { isLoading, isError, error, data } = useQuery('userRank', () =>
@@ -22,24 +22,23 @@ export default function UserRanking() {
   const [userInfo, setUserInfo] = useState({})
 
   useEffect(() => {
-    if(data) {
+    if (data) {
       let userData = data.find(v => v.userId === userName)
-      userData.rank = data.findIndex(v => v.userId === userName)+1
+      userData.rank = data.findIndex(v => v.userId === userName) + 1
       setUserInfo(userData)
     }
-  })
-  
+  }, [data, userName])
 
   return (
     <div>
       <Seo title="Kotudy" subtitle="개인 순위"></Seo>
       {isLoading ? (
         <Loading></Loading>
-        ) : isError ? (
-          <div>Error: {error.message}</div>
-        ) : (
-          <UserRank userList={data} userInfo={userInfo}></UserRank>
-        )
+      ) : isError ? (
+        <div>Error: {error.message}</div>
+      ) : (
+        <UserRanking userList={data} userInfo={userInfo}></UserRanking>
+      )
       }
     </div>
   )

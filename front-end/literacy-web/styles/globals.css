@@ -1,0 +1,65 @@
+:root {
+    /* Color */
+    --blue-color: #8D94EE;
+    --red-color: #EF777B;
+    --pink-color: #FF90BC;
+    --orange-color: #FFA88F;
+    --yellow-color: #FFCE6E;
+    --grey-dark-color: #464555;
+    --grey-light-color: #AAA9BC;
+    --btn-text-color: black;
+    --btn-bg-color: skyblue;
+    /* Component */
+    /* Button */
+    --btn-bg-color: var(--orange-color);
+    /* Card */
+    --card-bg-color: var(--yellow-color);
+    /* Carousel */
+    --carousel-bg-color: var(--blue-color);
+    /* Size */
+    --side-padding: 12px;
+    --avartar-size: 36px;
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+    /* z index*/
+    --z-index-top: 40;
+    --z-index-modal: 45;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    font-family: 'Hanna', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    display: none;
+}
+
+div {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

@@ -1,11 +1,11 @@
 import { dehydrate, QueryClient, useQuery } from "react-query";
-import Word from "../components/organism/page-word/Word";
+import Wordlayout from "../components/organism/page-word/Wordlayout";
 import { useRouter } from 'next/router';
 import { fetchWords } from "./api/fetchWords";
 import Loading from "../components/organism/page-loading/Loading";
 import Seo from "../components/seo/Seo";
 
-export default function word() {
+export default function Word() {
 
   const router = useRouter();
   const word = router.query.word;
@@ -24,7 +24,7 @@ export default function word() {
   let words = null;
   if (data) {
     words = data.channel.item
-    if(words) {
+    if (words) {
       check = 1;
     }
     if (data.channel.item.length === 0) {
@@ -35,8 +35,8 @@ export default function word() {
   return (
     <div>
       <Seo title="검색 결과" subtitle={word}></Seo>
-      {check == 1 ? <Word word={word} words={words} ></Word> : <Loading label="검색 중 ..."></Loading>}
-      {isNoItem? <div>검색 결과가 없습니다.</div> : <></>}
+      {check == 1 ? <Wordlayout word={word} words={words} ></Wordlayout> : <Loading label="검색 중 ..."></Loading>}
+      {isNoItem ? <div>검색 결과가 없습니다.</div> : <></>}
     </div>
   );
 }

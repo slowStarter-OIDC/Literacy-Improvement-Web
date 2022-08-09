@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { 
+const initialState = {
     isLogin: false,
     email: "",
 }; // 초기 상태 정의
