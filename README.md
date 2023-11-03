@@ -58,7 +58,11 @@ Build and Monitoring on
 4. 단어 검색, 문장 분석
 5. 퀴즈
 6. 랭킹
-7. 오픈 사전 
+7. 오픈 사전
+
+## 🎥 시연 영상
+https://github.com/slowStarter-OIDC/Literacy-Improvement-Web/assets/72070679/8c26d07b-287b-430e-b58d-5d3edfdc0a3b
+
 ## 💬 참조 Wiki
 #### [카카오 REST-API][카카오 로그인 서비스]
 > https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api
