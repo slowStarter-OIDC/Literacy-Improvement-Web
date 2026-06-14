@@ -93,7 +93,7 @@ public class SearchWordServiceImpl implements SearchWordService {
 		List<String> finalDtoList = new ArrayList<>();
 		// FinalDto finalDto = null;
 		String openApiURL = "http://aiopen.etri.re.kr:8000/WiseNLU";
-		String accessKey = "2c349c2b-b687-40ae-bf44-6683c48031f4"; // 문장분석 API Key
+		String accessKey = System.getenv("ETRI_API_KEY"); // 문장분석 API Key
 		String analysisCode = "ner"; // 언어코드
 		String text = ""; // 분석할 문장
 		Gson gson = new Gson();
@@ -305,7 +305,7 @@ public class SearchWordServiceImpl implements SearchWordService {
 
 			System.out.println("========한국어 기초사전 API 호출 ========");
 			String word = null; // example 검색을 위한 word
-			String urlStrWord = "https://krdict.korean.go.kr/api/search?" + "key=FAFF5405FEE6910E824515B8B9A2BA08" // 占쎌뵥筌앹빜沅�
+			String urlStrWord = "https://krdict.korean.go.kr/api/search?" + "key=" + System.getenv("KRDICT_API_KEY") // 占쎌뵥筌앹빜沅�
 					+ "&q=" + q; // 검색 키워드
 			URL urlWord = new URL(urlStrWord);
 			HttpURLConnection urlconnectionWord = (HttpURLConnection) urlWord.openConnection();

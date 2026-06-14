@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const fetchWords = async (txt) => {
-    const access_key = '8C003D093A7908069B600A0692DBFD11';
+    const access_key = process.env.OPENDICT_API_KEY;
     let q = '';
     const num = 20;
     const sort = "dict"; // dict / popular

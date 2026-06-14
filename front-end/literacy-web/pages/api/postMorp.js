@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const postMorp = async (text) => {
-  const access_key = '9c46ad05-ca7a-4326-8a93-64501b67e95b';
+  const access_key = process.env.ETRI_API_KEY;
   const analysisCode = "wsd_poly";
 
   // axios.defaults.baseURL = 'https://kotudy.netlify.app/' ;
