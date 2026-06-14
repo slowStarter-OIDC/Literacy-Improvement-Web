@@ -95,7 +95,8 @@ Build and Monitoring on
 
 | 이름 | 역할 | 담당 |
 | ------ | -- | -- |
-| 박철순 | 팀장 | Front-End |
+| 조소망 | 팀장 | Back-End |
+| 박철순 | 팀원 | Front-End |
 | 김정원 | 팀원 | Front-End |
 | 김시우 | 팀원 | Infra |
 | 황선형 | 팀원 | Back-End |
